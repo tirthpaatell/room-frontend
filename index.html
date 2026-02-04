@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>msgparty — Instant Rooms</title>
+
+  <meta name="description" content="Create an instant chat room. No login. No money. Just create a room and share with friends." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Background -->
+  <div class="bg">
+    <div class="noise"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="nav">
+    <div class="brand">
+      <img src="assets/logo.svg" class="brand-logo" alt="msgparty logo" />
+      <span class="brand-name">msgparty</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#privacy">Privacy</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <div class="badge">No login • No account • Free</div>
+
+        <h1>
+          Create a room.<br />
+          Share the link.<br />
+          <span class="accent">Enjoy together.</span>
+        </h1>
+
+        <p class="subtitle">
+          msgparty lets you create instant private rooms for chatting with friends.
+          No signup, no tracking, no nonsense.
+        </p>
+
+        <div class="card">
+          <div class="card-title">Start a new room</div>
+          <div class="card-sub">Optional password for private rooms.</div>
+
+          <div class="grid">
+            <div class="field">
+              <label>Password (optional)</label>
+              <input id="pass" class="input" placeholder="e.g. party123" />
+            </div>
+
+            <button class="btn btn-primary" id="createBtn">
+              Create Room
+            </button>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="card-title">Join an existing room</div>
+          <div class="card-sub">Paste room ID or invite link.</div>
+
+          <div class="grid">
+            <div class="field">
+              <label>Room ID / Link</label>
+              <input id="joinInput" class="input" placeholder="e.g. x8k2p9 or full link" />
+            </div>
+
+            <button class="btn btn-ghost" id="joinBtn">
+              Join Room
+            </button>
+          </div>
+
+          <div class="mini">
+            Rooms are temporary. When everyone leaves, the room is destroyed automatically.
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="preview">
+          <div class="preview-top">
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+          </div>
+
+          <div class="preview-body">
+            <div class="bubble sys">🎉 Welcome to msgparty</div>
+            <div class="bubble">Hey! Link bhej 😄</div>
+            <div class="bubble me">Done. Join karo 🔥</div>
+            <div class="bubble sys">3 friends joined</div>
+            <div class="bubble">No login? Crazy 😭</div>
+            <div class="bubble me">Yup. Just vibes 😎</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <h2>Why msgparty?</h2>
+      <p class="section-sub">
+        Built for fast communication with zero friction.
+      </p>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-title">⚡ Instant rooms</div>
+          <div class="feature-sub">Create and join rooms in 1 click.</div>
+        </div>
+        <div class="feature">
+          <div class="feature-title">🔒 Optional password</div>
+          <div class="feature-sub">Keep it private without accounts.</div>
+        </div>
+        <div class="feature">
+          <div class="feature-title">🧼 No login</div>
+          <div class="feature-sub">No signup. No email. No OTP.</div>
+        </div>
+        <div class="feature">
+          <div class="feature-title">🫧 Auto destroy</div>
+          <div class="feature-sub">Rooms vanish when empty.</div>
+        </div>
+        <div class="feature">
+          <div class="feature-title">📱 Mobile friendly</div>
+          <div class="feature-sub">Looks clean on any device.</div>
+        </div>
+        <div class="feature">
+          <div class="feature-title">🚀 Deployable</div>
+          <div class="feature-sub">Frontend on Vercel, backend on Render.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How -->
+    <section id="how" class="section">
+      <h2>How it works</h2>
+      <p class="section-sub">Simple steps. No drama.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-text">Create a room</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-text">Copy the link</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-text">Share with friends</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-text">Chat together</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section id="privacy" class="section">
+      <h2>Privacy</h2>
+      <p class="section-sub">
+        msgparty does not require accounts. Rooms are temporary.
+        Your messages are not stored permanently.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> msgparty</div>
+      <div class="footer-sub">Made for fun • No signups • Just rooms</div>
+    </footer>
+  </main>
+
+  <script>
+    // Helpers
+    const genRoomId = () => Math.random().toString(36).substring(2, 9);
+
+    const normalizeRoom = (input) => {
+      input = input.trim();
+      if (!input) return "";
+
+      // If user pasted full link
+      if (input.includes("room.html")) {
+        try {
+          const url = new URL(input);
+          return url.searchParams.get("room") || "";
+        } catch (e) {
+          // fallback
+        }
+      }
+
+      // If they pasted only id
+      return input.replace(/[^a-z0-9]/gi, "").slice(0, 12);
+    };
+
+    // Create Room
+    document.getElementById("createBtn").addEventListener("click", () => {
+      const id = genRoomId();
+      const pass = document.getElementById("pass").value.trim();
+      location.href = `room.html?room=${encodeURIComponent(id)}&pass=${encodeURIComponent(pass)}`;
+    });
+
+    // Join Room
+    document.getElementById("joinBtn").addEventListener("click", () => {
+      const raw = document.getElementById("joinInput").value;
+      const room = normalizeRoom(raw);
+
+      if (!room) {
+        alert("Please enter a valid Room ID or invite link.");
+        return;
+      }
+
+      location.href = `room.html?room=${encodeURIComponent(room)}`;
+    });
+
+    // Enter key
+    document.getElementById("pass").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") document.getElementById("createBtn").click();
+    });
+    document.getElementById("joinInput").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") document.getElementById("joinBtn").click();
+    });
+
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
