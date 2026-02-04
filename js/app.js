@@ -1,5 +1,5 @@
 // ====== CONFIG ======
-const BACKEND_URL = "YOUR_BACKEND_URL"; 
+const BACKEND_URL = "https://room-backend-s2vd.onrender.com"; 
 // Example: https://msgparty-backend.onrender.com
 
 // ====== HELPERS ======
@@ -169,4 +169,5 @@ $("copyLinkBtn").addEventListener("click", async () => {
 // ====== LEAVE ======
 $("leaveBtn").addEventListener("click", () => {
   location.href = "./index.html";
+
 });
